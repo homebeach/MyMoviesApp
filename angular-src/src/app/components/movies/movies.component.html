@@ -1,0 +1,10 @@
+<div>
+<h2 class="page-header">Add a new movie</h2>
+<form (submit)="onAddMovieSubmit()" >
+  <div class="form-group">
+    <label for="moviename">Movie name</label>
+    <input type="text" [(ngModel)]="moviename" name="moviename" class="form-control" id="moviename" placeholder="Enter movie name">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+</div>

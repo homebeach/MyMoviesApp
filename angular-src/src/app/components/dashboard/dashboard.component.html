@@ -1,2 +1,12 @@
-<h2 class="page-header">Dashboard</h2>
-<p>Welcome to your Dashboard</p>
+
+<h2 class="page-header">Favourite movies</h2>
+<p>Your favourite movies are</p>
+<ul class="movies">
+  <li *ngFor="let movie of movies">
+      <span class="badge">{{movie.moviename}}</span>
+  </li>
+</ul>
+<div>
+  <a class="btn btn-primary" [routerLink]="['/addmovie']">Add movie</a>
+  <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
+</div>

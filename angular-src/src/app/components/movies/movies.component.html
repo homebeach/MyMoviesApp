@@ -4,7 +4,17 @@
   <div class="form-group">
     <label for="moviename">Movie name</label>
     <input type="text" [(ngModel)]="moviename" name="moviename" class="form-control" id="moviename" placeholder="Enter movie name">
+
+    <label for="moviescore">Movie score</label>
+    <select [(ngModel)]="moviescore"  name="moviescore" id="moviescore">
+      <option  *ngFor="let i of numbers">
+        {{i}}
+      <option>
+    </select>
+
+
   </div>
   <input type="submit" class="btn btn-primary" value="Submit">
 </form>
+  <a class="btn btn-primary" [routerLink]="['/dashboard']">Back</a>
 </div>

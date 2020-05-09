@@ -9,6 +9,9 @@ const MovieSchema = mongoose.Schema ({
   },
   moviename: {
     type: String
+  },
+  moviescore: {
+    type: Number
   }
 });
 
@@ -19,10 +22,15 @@ module.exports.getMovieById = function(id, callback) {
 }
 
 module.exports.getMoviesByUsername = function(username, callback) {
-  const query = {username: username}
+  const query = {username: username};
   Movie.find(query, callback);
 }
 
 module.exports.addMovie = function(newMovie, callback) {
   newMovie.save(callback);
+}
+
+module.exports.deleteMovie = function(username, moviename, callback) {
+  const query = {username: username, moviename: moviename};
+  Movie.remove(query, callback);
 }

@@ -13,18 +13,30 @@ export class MoviesComponent implements OnInit {
 
   moviename: String;
 
+  moviename: String;
+
+  moviescore: Number;
+
+  numbers: Array<Number> = [];
+
+  //https://stackoverflow.com/questions/36354325/angular-2-ngfor-using-numbers-instead-collections
+
   constructor(
     private movieService: MovieService,
     private authService: AuthService,
     private router: Router,
-    private flashMessage: FlashMessagesService) {}
+    private flashMessage: FlashMessagesService) {
+      this.numbers = Array.from({length:10},(v,k)=>k+1);
+    }
+
   ngOnInit() {
   }
 
   onAddMovieSubmit() {
     const movie = {
       username: JSON.parse(localStorage.getItem('user')).username,
-      moviename: this.moviename
+      moviename: this.moviename,
+      moviescore: this.moviescore
     }
 
     // Register user

@@ -1,12 +1,14 @@
 
-<h2 class="page-header">Favourite movies</h2>
-<p>Your favourite movies are</p>
+<h2 class="page-header">My movies</h2>
+<p>{{welcomemessage}}</p>
 <ul class="movies">
   <li *ngFor="let movie of movies">
       <span class="badge">{{movie.moviename}}</span>
+      <span class="badge">{{movie.moviescore}}</span>
+      <button class="delete" title="delete movie"
+      (click)="deleteMovie(movie)">Delete</button>
   </li>
 </ul>
 <div>
-  <a class="btn btn-primary" [routerLink]="['/addmovie']">Add movie</a>
-  <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
+  <button class="btn btn-primary" [routerLink]="['/addmovie']">Add movie</button>
 </div>

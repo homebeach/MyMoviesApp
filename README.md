@@ -1,6 +1,6 @@
-# MEANauthapp
+# My MoviesApp
 
-Complete MEAN stack application with authentication using json web tokens
+My Movies app based on https://github.com/tomcatbuzz/meanauthapp
 
 ### Version
 1.0.0
@@ -20,5 +20,3 @@ Run app
 ```sh
 $ npm start
 ```
-
-### Screenshots in Wiki: https://github.com/tomcatbuzz/meanauthapp/wiki
